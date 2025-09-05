@@ -1,0 +1,44 @@
+/* Убираем отступы и рамки */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Наследуем шрифты */
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+/* Убираем стили списков */
+ul, ol {
+  list-style: none;
+}
+
+/* Убираем подчеркивания у ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Убираем рамки у кнопок и добавляем курсор */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Делает изображения отзывчивыми */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Таблицы без отступов */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

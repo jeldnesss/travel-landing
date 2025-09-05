@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing</title>
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href=""><img src="./img/Logo (1).svg" alt="Logo"></a>
+                <a href=""><p class="header__logo-text">Wonders</p></a>
+            </div>
+            <nav class="header__navigation">
+                <a href="" class="header__link">
+                    <p class="header__link-text">Mobile App</p>
+                </a><a href="" class="header__link">
+                    <p class="header__link-text">FAQs</p>
+                </a><a href="" class="header__link">
+                    <p class="header__link-text">Contact</p>
+                </a><a href="" class="header__link">
+                    <p class="header__link-text bold">Sign Up</p>
+                </a>
+            </nav>
+            <img src="./img/Menu.svg" id="menuHeader" class="menu-mobile" alt="">
+            <div class="header__menu-mobile">
+                <div class="header__menu-container">
+                    <a href="" class="header__link">
+                        <p class="header__menu-text">Mobile App</p>
+                    </a><a href="" class="header__link">
+                        <p class="header__menu-text">FAQs</p>
+                    </a><a href="" class="header__link">
+                        <p class="header__menu-text">Contact</p>
+                    </a><a href="" class="header__link">
+                        <p class="header__menu-text">Sign Up</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="welcome">
+        <div class="welcome__booking">
+            <form action="" class="welcome__form-booking">
+                <h1 class="welcome__title">Skip the Climbing, Catch the Bus</h1>
+                <p class="welcome__description">We sell tickets to the best seats in the house – houses on wheels, that is!  Get ready for jaw-dropping views without breaking a sweat.</p>
+                <div class="welcome__form">
+                    <input type="radio" name="trip" id="round-trip">
+                    <label for="round-trip">Round trip</label>
+                    <input type="radio" name="trip" id="one-way">
+                    <label for="one-way">One Way</label>
+                    <div class="welcome__person">
+                        <img class="person" src="./img/person solid.svg" alt="person">
+                        <img id="minus" src="./img/Minus.svg" alt="minus">
+                        <p class="welcome__person-count">1</p>
+                        <img id="plus" src="./img/Plus.svg" alt="plus">
+                    </div>
+                </div>
+                <div class="welcome__input-box">
+                    <div class="welcome__input-box-left">
+                        <div class="welcome__input-inf">
+                            <label for="city" class="welcome__input-name">Departure</label>
+                            <div class="welcome__autocomplete">
+                                <input type="text" id="departure" name="departure" placeholder="Your City/Station">
+                                <ul class="welcome__suggestions"></ul>
+                            </div>
+                        </div>
+                        <div class="welcome__input-inf">
+                            <label for="city" class="welcome__input-name">Pick your lucky day</label>
+                            <div class="welcome__custome-date">
+                                <input placeholder="Depart" type="text" name="departDate" id="departDate" readonly>
+                                <div class="placeholder-icon"></div>
+
+                                <div class="calendar" id="calendar" aria-hidden="true">
+                                    <div class="calendar__header">
+                                        <button type="button" class="calendar__btn-prev"></button>
+                                        <div class="calendar__month-year-wrapper">
+                                            <div class="calendar__month-year" id="monthYear1"></div>
+                                            <div class="calendar__month-year" id="monthYear2"></div>
+                                        </div>
+                                        <button type="button" class="calendar__btn-next"></button>
+                                    </div>
+
+                                    <div class="calendar__body" id="calendarBody">
+                                        <div class="calendar__weekday-wrapper">
+                                            <div class="calendar__weekday-names">
+                                                <div class="calendar__weekday">M</div>
+                                                <div class="calendar__weekday">T</div>
+                                                <div class="calendar__weekday">W</div>
+                                                <div class="calendar__weekday">T</div>
+                                                <div class="calendar__weekday">F</div>
+                                                <div class="calendar__weekday">S</div>
+                                                <div class="calendar__weekday">S</div>
+                                            </div>
+                                            <div class="calendar__weekday-names">
+                                                <div class="calendar__weekday">M</div>
+                                                <div class="calendar__weekday">T</div>
+                                                <div class="calendar__weekday">W</div>
+                                                <div class="calendar__weekday">T</div>
+                                                <div class="calendar__weekday">F</div>
+                                                <div class="calendar__weekday">S</div>
+                                                <div class="calendar__weekday">S</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="calendar__days-wrapper">
+                                            <div class="calendar__days" id="daysOfMonth1"></div>
+                                            <div class="calendar__days" id="daysOfMonth2"></div>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="calendar__footer">
+                                        <div class="calendar__footer-wrapper">
+                                            <button type="button" class="calendar__reset" id="resetBtn"><p class="calendar-btn-text">Reset</p></button>
+                                            <button type="button" class="calendar__apply" id="applyBtn"><p class="calendar-btn-text white-text">Apply</p></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome__input-box-right">
+                        <div class="welcome__input-inf">
+                            <label for="city" class="welcome__input-name">Arrival</label>
+                            <div class="welcome__autocomplete">
+                                <input type="text" name="arrive" id="arrive" placeholder="Where to?">
+                                <ul class="welcome__suggestions"></ul>
+                            </div>
+                        </div>
+                        <div class="welcome__input-inf">
+                            <div class="welcome__custome-date">
+                                <input placeholder="Return" type="text" name="arriveDate" id="arriveDate" readonly>
+                                <div class="placeholder-icon"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="welcome__find" type="submit"><p class="welcome__btn-text">Find My Alpine Ride</p></button>
+            </form>
+            
+        </div>
+        
+        <img class="welcome__img" src="./img/hero (1).png" alt="Background">
+    </section>
+    <div class="information-line">
+        <div class="information-line__wrapper">
+            <div class="information-line__wrapper-top">
+                <div class="kilometers">
+                    <p class="information-line__big-text">68k+</p>
+                    <p class="information-line__text">Track kilometers</p>
+                </div>
+                <div class="photos">
+                    <p class="information-line__big-text">1.4M+</p>
+                    <p class="information-line__text">Photos Taken</p>
+                </div>
+            </div>
+            <div class="information-line__wrapper-bottom">
+                <div class="altitude">
+                    <p class="information-line__big-text">23M+</p>
+                    <p class="information-line__text">Altitude Gained</p>
+                </div>
+                <div class="years">
+                    <p class="information-line__big-text">165+</p>
+                    <p class="information-line__text">Years of history</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <section class="glimpses-img">
+        <h1>Glimpses of Glory</h1>
+        <div class="glimpses-img__container">
+            <img id="img1" class="img1 img" src="./img/ing02.jpg" alt="">
+            <img id="img2" class="img2 img" src="./img/ing03.jpg" alt="">
+            <img id="img3" class="img3 img" src="./img/ing05.jpg" alt="">
+            <img id="img4" class="img4 img" src="./img/ing01.jpg" alt="">
+            <img id="img5" class="img5 img" src="./img/ing04.jpg" alt="">
+        </div>
+    </section>
+    <div class="downloads">
+        <h1 class="downloads__title">Free downloads app now!</h1>
+        <div class="downloads__icons">
+            <a class="download1" href=""><img src="./img/Badges (4).svg" alt=""></a>
+            <a img class="download2" href=""><img class="download2" src="./img/Badges (2).svg" alt=""></a>
+            <a class="download3" href=""><img src="./img/Badges (3).svg" alt=""></a>
+        </div>
+    </div>
+    <section class="facts">
+        <h1>FAQs.</h1>
+        <div class="facts__inf-box">
+            <div class="facts__inf">
+                <div class="facts__name-box">
+                    <p class="facts__name">Alpine Bus Journeys?</p>
+                    <div class="facts__more"></div>
+                </div>
+                <p class="facts__text">Forget crowded cities! Alpine Bus Journeys are your comfy seat with panoramic windows to breathtaking mountain vistas, charming villages, and air so fresh it might make you yodel (please don't, unless you're outside). It's transportation with a side of unparalleled scenery (and maybe a hairpin turn).</p>
+                <div class="facts__line"></div>
+            </div>
+            <div class="facts__inf">
+                <div class="facts__name-box">
+                    <p class="facts__name">What about seating options?</p>
+                    <div class="facts__more"></div>
+                </div>
+                <p class="facts__text">Generally, you'll find comfy standard seats (great views, great value, maybe great new friends) and perhaps slightly better seats with extra legroom. All offer a front-row seat to the greatest show on Earth – the Alps!.</p>
+                <div class="facts__line"></div>
+            </div>
+            <div class="facts__inf">
+                <div class="facts__name-box">
+                    <p class="facts__name">What is the Alpine Wallet?</p>
+                    <div class="facts__more"></div>
+                </div>
+                <p class="facts__text">It's your digital stash of cash that makes booking bus tickets smoother than a perfectly paved mountain road. Load it up and watch your travel dreams become reality faster than a bus goes downhill.</p>
+                <div class="facts__line"></div>
+            </div>
+            <div class="facts__inf">
+                <div class="facts__name-box">
+                    <p class="facts__name">My Altitude Score?</p>
+                    <div class="facts__more"></div>
+                </div>
+                <p class="facts__text">Your loyalty points for cruising the mountain roads! Higher scores might get you priority boarding (less elbowing for the best window seat!) or maybe just bragging rights among fellow peak-passengers who prefer four wheels.</p>
+                <div class="facts__line"></div>
+            </div>
+            <div class="facts__inf">
+                <div class="facts__name-box">
+                    <p class="facts__name">Why a Bus Station Fee?</p>
+                    <div class="facts__more"></div>
+                </div>
+                <p class="facts__text">A small contribution to ensure the station is clean, has reasonably fresh mountain air (filtered from bus fumes), and enough signs pointing you towards your bus, not away from it. Sometimes covers the cost of moving rogue bicycles.</p>
+                <div class="facts__line"></div>
+            </div>
+            <div class="facts__inf">
+                <div class="facts__name-box">
+                    <p class="facts__name">Why are buses late?</p>
+                    <div class="facts__more"></div>
+                </div>
+                <p class="facts__text">Sometimes it's the weather (snow happens!), sometimes a sudden flock of particularly slow-moving sheep on the road, and sometimes the driver just had to stop for a photo of that view. Or maybe they got stuck behind a tractor. Welcome to "Mountain Road Time"!</p>
+                <div class="facts__line"></div>
+            </div>
+            <div class="facts__inf">
+                <div class="facts__name-box">
+                    <p class="facts__name">Peak Season Surcharge?</p>
+                    <div class="facts__more"></div>
+                </div>
+                <p class="facts__text">It's the little extra you pay to enjoy the authentic experience of sharing breathtaking views with a lot of your closest friends (who you haven't met yet) while strategically placing your bag in the overhead compartment. Guarantees a vibrant, energetic journey!</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section">
+        <div class="contact">
+            <h1>Contact us</h1>
+            <div class="contacts__inf">
+                <p style="font-size: 1.75rem;">+41 98765 43210</p>
+                <p style="font-size: 1.75rem;">hello@peakpasses.eu</p>
+            </div>
+            <p class="adress"> Alpenblick Strasse 7, <br>12345 Edelweiss Town, Alps</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="header__logo">
+                <a href=""><img src="./img/logo-footer.svg" alt="Logo"></a>
+                <a href=""><p class="header__logo-text logo-footer">Wonders</p></a>
+            </div>
+            <div class="footer__navigation-container">
+                <div class="footer__list">
+                    <p class="footer__list-name">About</p>
+                    <div class="footer__list-box">
+                        <a href=""><p class="footer__list-item">How it works</p></a>
+                        <a href=""><p class="footer__list-item">Featured</p></a>
+                        <a href=""><p class="footer__list-item">Partnership</p></a>
+                        <a href=""><p class="footer__list-item">Bussiness Relation</p></a>
+                    </div>
+                </div>
+
+                <div class="footer__list">
+                    <p class="footer__list-name">Community</p>
+                    <div class="footer__list-box">
+                        <a href=""><p class="footer__list-item">Events</p></a>
+                        <a href=""><p class="footer__list-item">Blog</p></a>
+                        <a href=""><p class="footer__list-item">Podcast</p></a>
+                        <a href=""><p class="footer__list-item">Invite a friend</p></a>
+                    </div>
+                </div>
+
+                <div class="footer__list">
+                    <p class="footer__list-name">Socials</p>
+                    <div class="footer__list-box">
+                        <a href=""><p class="footer__list-item">Discord</p></a>
+                        <a href=""><p class="footer__list-item">Instagram</p></a>
+                        <a href=""><p class="footer__list-item">Twitter</p></a>
+                        <a href=""><p class="footer__list-item">Facebook</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="footer__text">English: © 2025 Peak Passages. <br>All Rights Reserved (Especially the Window Seats).</p>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+</html>
